@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的歌单</title>
+    <link rel="stylesheet" href="paqia.css">
+</head>
+<body>
+    <header>
+        <h1>INTRODUCTION</h1>
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">网站首页</a></li>
+                <li class="nav-item"><a href="基本信息.html" class="nav-link">基本信息</a></li>
+                <li class="nav-item"><a href="我的爱好.html" class="nav-link">我的爱好</a></li>
+                <li class="nav-item"><a href="我的歌单.html" class="nav-link">我的歌单</a></li>
+                <li class="nav-item"><a href="更多.html" class="nav-link">更多</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">返回寝室主页</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            </nav>
+        </header>
+
+        <section class="one">
+            <div class="two">
+            <div class="part">
+            <div>
+                <img src="image/你从未离去.jpg" alt="你从未离去">
+                <h3>你从未离去</h3>
+                <audio controls preload="metadata" src="music/你从未离去.mp3"></audio>                
+            </div>
+            <div>
+                <img src="image/安河桥.jpg" alt="安和桥">
+                <h3>宋冬野 - 安和桥</h3>
+                <audio controls preload="metadata" src="music/宋冬野 - 安和桥.mp3"></audio>                
+            </div>
+        </div>
+        <div class="part">
+            <div>
+                <img src="image/成都.jpg" alt="成都">
+                <h3>成都</h3>
+                <audio controls preload="metadata" src="music/成都.mp3"></audio>                
+            </div>
+            <div>
+                <img src="image/向云端.jpg" alt="向云端">
+                <h3>向云端</h3>
+                <audio controls preload="metadata" src="music/向云端.mp3"></audio>                
+            </div>
+        </div>
+        </div>
+        </section>
+        <script>
+            var audios = document.getElementsByTagName("audio");
+            function pauseOthers(audio) {
+            for (var i = 0; i < audios.length; i++) {
+                if (audios[i] !== audio) {
+                    audios[i].pause();
+                }
+            }
+        }
+            for (var i = 0; i < audios.length; i++) {
+                audios[i].addEventListener("play", function() {
+                    pauseOthers(this);
+                });
+            }
+    const hamburgerEl = document.querySelector('.hamburger')
+    const navMenuEl = document.querySelector('.nav-menu')
+
+    hamburgerEl.addEventListener('click',()=>{
+        navMenuEl.classList.toggle('active')
+        hamburgerEl.classList.toggle('active')
+    })
+    document.querySelectorAll('.nav-link').forEach(item =>{
+        item.addEventListener('click',()=>{
+        
+        navMenuEl.classList.toggle('active')
+        hamburgerEl.classList.toggle('active')
+        })
+    })
+        </script>
+</body>
+<footer>
+    <p>Copyright @ WAZ All rights reserved.</p>
+</footer>
+</html>

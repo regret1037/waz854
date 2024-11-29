@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本信息</title>
+    <link rel="stylesheet" href="kuromi.css">
+</head>
+<body>
+    <header>
+        <h1>INTRODUCTION</h1>
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">网站首页</a></li>
+                <li class="nav-item"><a href="基本信息.html" class="nav-link">基本信息</a></li>
+                <li class="nav-item"><a href="我的爱好.html" class="nav-link">我的爱好</a></li>
+                <li class="nav-item"><a href="我的歌单.html" class="nav-link">我的歌单</a></li>
+                <li class="nav-item"><a href="更多.html" class="nav-link">更多</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">返回寝室主页</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="travel">
+                <div>
+                    <ul class="slides">
+                        <input type="radio" id="control-1" name="control" checked>
+                        <input type="radio" id="control-2" name="control">
+                        <input type="radio" id="control-3" name="control">
+
+                        <li class="slide"></li>
+                        <li class="slide"></li>
+                        <li class="slide"></li>
+                    </ul>
+                    <h3>西安</h3>
+                    <p>西安，中国古都，世界四大古都之一，历史上13个朝代在此建都。以兵马俑、古城墙等历史遗迹著称，周边华山风景秀丽。文化深厚，秦腔、陕西小吃等民俗文化丰富多彩。现代发展迅速，气候四季分明，是旅游和探索中国历史的绝佳之地。</p>
+                </div>
+                <div>
+                    <ul class="slides2">
+                        <input type="radio" id="control-1" name="control2" checked>
+                        <input type="radio" id="control-2" name="control2">
+                        <input type="radio" id="control-3" name="control2">
+
+                        <li class="slide2"></li>
+                        <li class="slide2"></li>
+                        <li class="slide2"></li>
+                    </ul>
+                    <h3>成都</h3>
+                    <p>成都，享有“天府之国”美誉，是中国历史文化名城。以悠闲生活、美食和茶文化闻名，拥有青城山、三星堆等古迹。川菜和蜀锦享誉世界，是一座充满魅力的城市。成都，一座来了就不想离开的城市，以其独特的文化和生活方式吸引着世界各地的游客。</p>
+                </div>
+                <div>
+                    <ul class="slides3">
+                        <input type="radio" id="control-1" name="control3" checked>
+                        <input type="radio" id="control-2" name="control3">
+                        <input type="radio" id="control-3" name="control3">
+
+                        <li class="slide3"></li>
+                        <li class="slide3"></li>
+                        <li class="slide3"></li>
+                    </ul>
+                    <h3>北京</h3>
+                    <p>
+                        北京，中国的首都，是政治、文化中心，也是历史悠久的城市。故宫、长城等古迹闻名遐迩，北京大学、清华大学等学府云集。科技创新活跃，798艺术区等文化地标展现现代艺术。北京烤鸭等美食享誉世界，四季分明，2008年奥运会提升了其国际地位。北京，传统与现代交融的大都市。</p>
+                </div>
+                <div class="topic">
+                    <p>旅行</p>
+                </div>
+            </section>
+        
+            </main>
+            <script>
+                const hamburgerEl = document.querySelector('.hamburger')
+                const navMenuEl = document.querySelector('.nav-menu')
+            
+                hamburgerEl.addEventListener('click',()=>{
+                    navMenuEl.classList.toggle('active')
+                    hamburgerEl.classList.toggle('active')
+                })
+                document.querySelectorAll('.nav-link').forEach(item =>{
+                    item.addEventListener('click',()=>{
+                    
+                    navMenuEl.classList.toggle('active')
+                    hamburgerEl.classList.toggle('active')
+                    })
+                })
+            </script>
+</body>   
+<footer>
+    <p>Copyright @ WAZ All rights reserved.</p>
+</footer>
+</html>

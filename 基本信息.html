@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本信息</title>
+    <link rel="stylesheet" href="blueloopy.css">
+</head>
+<body>
+    <header>
+        <h1>INTRODUCTION</h1>
+        <nav class="nav-bar">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">网站首页</a></li>
+                <li class="nav-item"><a href="基本信息.html" class="nav-link">基本信息</a></li>
+                <li class="nav-item"><a href="我的爱好.html" class="nav-link">我的爱好</a></li>
+                <li class="nav-item"><a href="我的歌单.html" class="nav-link">我的歌单</a></li>
+                <li class="nav-item"><a href="更多.html" class="nav-link">更多</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">返回寝室主页</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="one">
+            <img src="image/大头照.png" alt="大头照">
+            <div>
+            <ul>
+                <li><a ><strong>姓名:</strong>王安政</a></li>
+                <li><a ><strong>年龄:</strong>18</a></li>
+                <li><a ><strong>家乡:</strong>河北保定</a></li>
+                <li><a ><strong>学校:</strong>华中科技大学</a></li>
+                <li><a ><strong>班级:</strong>计科2411班</a></li>
+            </ul>
+            </div>
+
+            <div class="introduce">
+                <h4>自我介绍</h4>
+                <p>大家好，我是王安政，来自河北保定。我性格内向，可能不是那种在人群中最活跃的类型，但我内心充满热情，非常珍视与朋友们的每一次交流。我对编程略感兴趣，虽然目前只是略懂皮毛，但我一直在不断地学习和进步。除了编程，我还热爱旅游，喜欢探索未知的风景和文化。我期待能找到志同道合的朋友，也希望能遇到旅行中的搭子，共同踏上探索世界的旅程。让我们在技术与冒险中找到共鸣，一起成长，一起发现生活中的美好。</p>
+            </div>
+            <div class="topic">
+                <p>基本信息</p>
+            </div>
+            </section>
+        
+            </main>
+            <script>
+                const hamburgerEl = document.querySelector('.hamburger')
+                const navMenuEl = document.querySelector('.nav-menu')
+            
+                hamburgerEl.addEventListener('click',()=>{
+                    navMenuEl.classList.toggle('active')
+                    hamburgerEl.classList.toggle('active')
+                })
+                document.querySelectorAll('.nav-link').forEach(item =>{
+                    item.addEventListener('click',()=>{
+                    
+                    navMenuEl.classList.toggle('active')
+                    hamburgerEl.classList.toggle('active')
+                    })
+                })
+            </script>
+            <footer>
+                <p>Copyright @ WAZ All rights reserved.</p>
+            </footer>
+</body>
+</html>
